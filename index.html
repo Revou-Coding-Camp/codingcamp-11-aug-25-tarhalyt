@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello, Selamat Datang Di Website Saya</title>
+    <link rel="icon" type="image/png" href="./assets/Rubah.png" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/Rubah.png" alt="Logo" class="logo-img">
+            Jimmy's Website
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+            ☰
+        </button>
+
+        <nav id="site-nav" class="nav-boxed">
+            <a href="#about">Tentang Kami</a>
+            <a href="#location">Lokasi</a>
+            <a href="#contact">Hubungi Kami</a>
+        </nav>
+    </header>
+
+
+    <main>
+    <section class="about" id="about">
+        <h1 style="margin-bottom: 0px;">Tentang Kami,</h1>
+        <p style="margin-top: 10px; margin-left: 10px;">Kami menyediakan layanan pemesanan tiket perjalanan ke berbagai negara di Asia.
+            Pesan tiket dengan mudah, cepat, dan aman langsung dari website ini.</p>
+
+        <div class="gallery">
+            <img src="./assets/jepang.jpg" alt="Jepang" data-text="Jepang – Negeri Sakura yang terkenal dengan budaya tradisional, teknologi canggih, dan kuliner unik seperti sushi.">
+            <img src="./assets/thailand.jpg" alt="Thailand" data-text="Thailand – Dikenal dengan pantai tropis, kuil Buddha, dan street food yang lezat.">
+            <img src="./assets/malaysia.jpg" alt="Malaysia" data-text="Malaysia – Perpaduan budaya Melayu, Tionghoa, dan India dengan destinasi seperti Menara Petronas.">
+            <img src="./assets/singapura.jpg" alt="Singapura" data-text="Singapura – Kota modern yang bersih dan teratur dengan ikon seperti Marina Bay Sands dan Gardens by the Bay.">
+            <img src="./assets/korea.jpg" alt="Korea Selatan" data-text="Korea Selatan – Pusat K-pop, drama Korea, dan wisata kota modern seperti Seoul.">
+            <img src="./assets/china.jpg" alt="China" data-text="China – Negeri bersejarah dengan Tembok Besar, Kota Terlarang, dan kuliner yang beragam.">
+        </div>
+        <p id="gallery-text" style="text-align: center;">
+            Silahkan Klik Gambar untuk mendapatkan informasi lebih lanjut tentang gambar yang bersangkutan
+        </p>
+    </section>
+
+
+
+    <section class="headquarters" id="location"> 
+        <h2>Pusat Kantor Kami</h2> 
+        <div class="locations"> 
+            <div> 
+                <div class="circle"> 
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Medan_city_2019.jpg/330px-Medan_city_2019.jpg" alt="Medan">
+                </div> 
+                <p>Medan</p> 
+            </div> 
+            <div> 
+                <div class="circle"> 
+                    <img src="https://ekaputrawisata.com/wp-content/uploads/2025/01/Where-is-Jakarta-Located-Explore-Indonesias-Capital-City.webp" alt="Jakarta"> 
+                </div> 
+                <p>Jakarta</p> 
+            </div> 
+            <div> 
+                <div class="circle"> 
+                    <img src="https://a0.muscache.com/im/pictures/INTERNAL/INTERNAL-ImageByPlaceId-ChIJf0dSgjnmaC4RshXo05MfahQ-large_background/original/400e5fa3-eb14-4445-8d8e-f5e88daf20d2.jpeg" alt="Bandung"> 
+                </div> 
+                <p>Bandung</p> 
+            </div> 
+            <div> 
+                <div class="circle"> 
+                    <img src="https://ikbis.ac.id/wp-content/uploads/2021/03/Anda-di-Surabaya-Inilah-Pentingnya-Menggunakan-Konsultan-Pajak-Surabaya.jpg" alt="Surabaya"> 
+                </div> 
+                <p>Surabaya</p> 
+            </div> 
+            <div> 
+                <div class="circle"> 
+                    <img src="https://cdn.audleytravel.com/2478/1770/79/16027396-pura-ulun-danu-bratan-bali.jpg" alt="Bali"> 
+                </div> 
+                <p>Bali</p> 
+            </div> 
+        </div> 
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Hubungi Kami</h2>
+
+        <div class="contact-container">
+            <form class="form-grid">
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" placeholder="Tulis nama kamu" required>
+
+                <label for="birthdate">Tanggal Lahir</label>
+                <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2025-08-08">
+
+                <label>Jenis Kelamin</label>
+                <div class="gender-row">
+                    <label class="radio">
+                        <input type="radio" name="gender" value="Laki-Laki" required>
+                        <span>Laki-Laki</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="gender" value="Perempuan" required>
+                        <span>Perempuan</span>
+                    </label>
+                </div>
+
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" placeholder="Tulis pesan kamu" required></textarea>
+
+                <span class="label-spacer" aria-hidden="true"></span>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+
+
+            <div class="contact-info">
+                <p><strong>Current time :</strong> Thu Aug 13 2025 01:01:01 GMT+0100</p>
+                <p><strong>Nama :</strong> Jimmy</p>
+                <p><strong>Tanggal Lahir :</strong> 01/01/2001</p>
+                <p><strong>Jenis Kelamin :</strong> Laki-Laki</p>
+                <p><strong>Pesan :</strong> Lagi Sibuk Bikin Website</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <p>Created by Jimmy</p>
+    </footer>
+</body>
+</html>
+<script src="js/script.js"></script>
