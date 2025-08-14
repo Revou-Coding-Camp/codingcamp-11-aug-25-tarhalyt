@@ -2,6 +2,7 @@ const btn = document.querySelector('.nav-toggle');
 const nav = document.getElementById('site-nav');
 const form = document.querySelector('.form-grid');
 const contactInfo = document.querySelector('.contact-info');
+const welcomeName = document.getElementById('welcome-name'); // ambil elemen nama di welcome
 
 btn.addEventListener('click', () => {
   const open = nav.classList.toggle('is-open');
@@ -21,6 +22,7 @@ form.addEventListener('submit', function(e) {
     return;
   }
 
+  // Update info di bawah
   contactInfo.innerHTML = `
     <p><strong>Current time :</strong> ${new Date().toString()}</p>
     <p><strong>Nama :</strong> ${nama}</p>
@@ -29,18 +31,18 @@ form.addEventListener('submit', function(e) {
     <p><strong>Pesan :</strong> ${message}</p>
   `;
 
+  // Update nama di bagian Hello Anonymous
+  if (welcomeName) {
+    welcomeName.textContent = nama;
+  }
+
   form.reset();
 });
 
 document.querySelectorAll('.gallery img').forEach(img => {
   img.addEventListener('click', function() {
-    // Hapus active di semua gambar
     document.querySelectorAll('.gallery img').forEach(i => i.classList.remove('active'));
-    
-    // Tambah active di gambar yang diklik
     this.classList.add('active');
-
-    // Update teks di bawah
     const text = this.getAttribute('data-text');
     document.getElementById('gallery-text').textContent = text;
   });
