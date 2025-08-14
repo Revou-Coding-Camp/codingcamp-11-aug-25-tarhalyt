@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello, Selamat Datang Di Website Saya</title>
-    <link rel="icon" type="image/png" href="Rubah.png" />
+    <link rel="icon" type="image/png" href="./assets/Rubah.png" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="Rubah.png" alt="Logo" class="logo-img">
-            My Portfolio
+            <img src="./assets/Rubah.png" alt="Logo" class="logo-img">
+            Jimmy's Website
         </div>
 
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
@@ -19,26 +19,35 @@
         </button>
 
         <nav id="site-nav" class="nav-boxed">
-            <a href="#">Home</a>
-            <a href="#">Our Profile</a>
-            <a href="#">Portfolio</a>
-            <a href="#contact">Message Us</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#location">Lokasi</a>
+            <a href="#contact">Hubungi Kami</a>
         </nav>
     </header>
 
 
     <main>
-    <section class="welcome">
-        <h1>Hi Jimmy, Welcome To Website</h1>
-        <p>Ini adalah Website untuk Tugas Submission Revou</p>
+    <section class="about" id="about">
+        <h1 style="margin-bottom: 0px;">Tentang Kami,</h1>
+        <p style="margin-top: 10px; margin-left: 10px;">Kami menyediakan layanan pemesanan tiket perjalanan ke berbagai negara di Asia.
+            Pesan tiket dengan mudah, cepat, dan aman langsung dari website ini.</p>
 
-        <div class="banner">
-        <img src="Pemandangan.png"
-            alt="Gambar Pemandangan">
+        <div class="gallery">
+            <img src="./assets/jepang.jpg" alt="Jepang" data-text="Jepang – Negeri Sakura yang terkenal dengan budaya tradisional, teknologi canggih, dan kuliner unik seperti sushi.">
+            <img src="./assets/thailand.jpg" alt="Thailand" data-text="Thailand – Dikenal dengan pantai tropis, kuil Buddha, dan street food yang lezat.">
+            <img src="./assets/malaysia.jpg" alt="Malaysia" data-text="Malaysia – Perpaduan budaya Melayu, Tionghoa, dan India dengan destinasi seperti Menara Petronas.">
+            <img src="./assets/singapura.jpg" alt="Singapura" data-text="Singapura – Kota modern yang bersih dan teratur dengan ikon seperti Marina Bay Sands dan Gardens by the Bay.">
+            <img src="./assets/korea.jpg" alt="Korea Selatan" data-text="Korea Selatan – Pusat K-pop, drama Korea, dan wisata kota modern seperti Seoul.">
+            <img src="./assets/china.jpg" alt="China" data-text="China – Negeri bersejarah dengan Tembok Besar, Kota Terlarang, dan kuliner yang beragam.">
         </div>
+        <p id="gallery-text" style="text-align: center;">
+            Silahkan Klik Gambar untuk mendapatkan informasi lebih lanjut tentang gambar yang bersangkutan
+        </p>
     </section>
 
-    <section class="headquarters"> 
+
+
+    <section class="headquarters" id="location"> 
         <h2>Pusat Kantor Kami</h2> 
         <div class="locations"> 
             <div> 
@@ -75,39 +84,40 @@
     </section>
 
     <section class="contact" id="contact">
-        <h2>Message Us</h2>
+        <h2>Hubungi Kami</h2>
 
         <div class="contact-container">
             <form class="form-grid">
                 <label for="name">Nama</label>
-                <input type="text" id="name" name="name" placeholder="Tulis nama kamu">
+                <input type="text" id="name" name="name" placeholder="Tulis nama kamu" required>
 
                 <label for="birthdate">Tanggal Lahir</label>
-                <input type="date" id="birthdate" name="birthdate">
+                <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2025-08-08">
 
                 <label>Jenis Kelamin</label>
                 <div class="gender-row">
-                <label class="radio">
-                    <input type="radio" name="gender" value="Laki-Laki">
-                    <span>Laki-Laki</span>
-                </label>
-                <label class="radio">
-                    <input type="radio" name="gender" value="Perempuan">
-                    <span>Perempuan</span>
-                </label>
+                    <label class="radio">
+                        <input type="radio" name="gender" value="Laki-Laki" required>
+                        <span>Laki-Laki</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="gender" value="Perempuan" required>
+                        <span>Perempuan</span>
+                    </label>
                 </div>
 
                 <label for="message">Pesan</label>
-                <textarea id="message" name="message" placeholder="Tulis pesan kamu"></textarea>
+                <textarea id="message" name="message" placeholder="Tulis pesan kamu" required></textarea>
 
                 <span class="label-spacer" aria-hidden="true"></span>
                 <button type="submit" class="btn-submit">Submit</button>
             </form>
 
+
             <div class="contact-info">
                 <p><strong>Current time :</strong> Thu Aug 13 2025 01:01:01 GMT+0100</p>
                 <p><strong>Nama :</strong> Jimmy</p>
-                <p><strong>Tanggal Lahir :</strong> 01/01/2001 (Palsu)</p>
+                <p><strong>Tanggal Lahir :</strong> 01/01/2001</p>
                 <p><strong>Jenis Kelamin :</strong> Laki-Laki</p>
                 <p><strong>Pesan :</strong> Lagi Sibuk Bikin Website</p>
             </div>
